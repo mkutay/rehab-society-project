@@ -1,7 +1,7 @@
 'use server';
 
 import { type Session } from 'next-auth';
-import { revalidatePath, unstable_noStore as noStore, revalidateTag } from 'next/cache';
+import { revalidatePath } from 'next/cache';
 import { PostgresError } from 'postgres';
 
 import { auth } from '@/lib/auth';
@@ -10,7 +10,7 @@ import { siteConfig } from '@/config/site';
 import { guestbookFormSchema, guestbookDialogFormSchema } from '@/config/schema';
 
 async function getSession(): Promise<Session> {
-  let session = await auth();
+  const session = await auth();
   
   if (!session || !session.user) {
     throw new Error('Unauthorized');
@@ -97,14 +97,14 @@ export async function saveGuestbookEntry({
 }
 
 export async function deleteGuestbookEntries(selectedEntries: number[]) {
-  let session = await getSession();
-  let email = session.user?.email as string;
+  const session = await getSession();
+  const email = session.user?.email as string;
 
   if (!siteConfig.admins.includes(email)) {
     throw new Error('Unauthorized');
   }
 
-  let arrayLiteral = `{${selectedEntries.join(',')}}`;
+  const arrayLiteral = `{${selectedEntries.join(',')}}`;
 
   await sql`
     DELETE FROM guestbook
