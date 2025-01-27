@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-prose px-4">
+    <div className="mx-auto max-w-prose px-4 mb-16">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         {`${siteConfig.name} Guestbook`}
       </h1>
