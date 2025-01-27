@@ -10,6 +10,21 @@ export default {
   theme: {
   	extend: {
   		colors: {
+				rosewater: "hsl(var(--rosewater))",
+        flamingo: "hsl(var(--flamingo))",
+        pink: "hsl(var(--pink))",
+        mauve: "hsl(var(--mauve))",
+        red: "hsl(var(--red))",
+        maroon: "hsl(var(--maroon))",
+        peach: "hsl(var(--peach))",
+        yellow: "hsl(var(--yellow))",
+        green: "hsl(var(--green))",
+        teal: "hsl(var(--teal))",
+        sky: "hsl(var(--sky))",
+        sapphire: "hsl(var(--sapphire))",
+        blue: "hsl(var(--blue))",
+        lavender: "hsl(var(--lavender))",
+        text: "hsl(var(--foreground))",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
