@@ -10,12 +10,12 @@ import { entryType } from '@/config/schema';
 import { siteConfig } from '@/config/site';
 
 export const metadata = {
-  title: 'Sign and Mark My Guestbook',
-  description: 'Sign my guestbook and leave your mark on this infinite internet, here.',
+  title: 'Sign and Mark Our Guestbook',
+  description: 'Sign our guestbook and leave your mark on this infinite internet, here.',
   keywords: ['guestbook', 'mark'],
   openGraph: {
-    title: 'Sign and Mark My Guestbook',
-    description: 'Sign my guestbook and leave your mark on this infinite internet, here.',
+    title: 'Sign and Mark Our Guestbook',
+    description: 'Sign our guestbook and leave your mark on this infinite internet, here.',
     url: siteConfig.url + '/guestbook',
     locale: 'en_UK',
     type: 'website',
@@ -31,7 +31,7 @@ export default function Page() {
         {`${siteConfig.name} Guestbook`}
       </h1>
       <h2 className="scroll-m-20 text-2xl font-semibold tracking-wide text-primary uppercase my-6">
-        Sign My Guestbook!
+        Sign Our Guestbook!
       </h2>
       <main className="flex flex-col gap-4">
         <Suspense fallback={<Skeleton className="h-12 md:w-2/5 w-full"/>}>
