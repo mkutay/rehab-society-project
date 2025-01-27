@@ -34,7 +34,7 @@ export default function Page() {
         Sign Our Guestbook!
       </h2>
       <main className="flex flex-col gap-4">
-        <Suspense fallback={<Skeleton className="h-12 md:w-2/5 w-full"/>}>
+        <Suspense fallback={<Skeleton className="h-10 w-full"/>}>
           <Form/>
         </Suspense>
         <Suspense fallback={<GuestbookEntriesFallback/>}>
